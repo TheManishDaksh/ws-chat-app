@@ -8,9 +8,9 @@ function App(){
 
   const [socket, setSocket] = useState<WebSocket>()
   const [messages, setMessages] = useState<String[]>([])
-
+       
   useEffect(()=>{
-    const ws:WebSocket = new WebSocket("ws://localhost:8000")
+    const ws = new WebSocket("ws://localhost:8000")
 
     ws.onopen=()=>{
       console.log("server is ready to connect");
